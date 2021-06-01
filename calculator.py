@@ -7,6 +7,7 @@ class Calculator:
         self.root = Tk()
         self.root.title( "Calculator")
         self.root.config( background="#27272a")
+        self.root.resizable( 0, 0)
 
         self.display = Entry( self.root)
         self.display.grid( column=0, row=0, columnspan=4, padx=10, pady=15, sticky="we")
