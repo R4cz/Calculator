@@ -1,2 +1,2 @@
-# proyect1
+# Calculator
  calculator
