@@ -48,32 +48,32 @@ class Calculator:
     #ENGINE
     i = 0
 
-    def get_numbers(self, n):
-        self.display.insert(Calculator.i, n)
-        Calculator.i+= 1
+    def get_numbers( self, n):
+        self.display.insert( Calculator.i, n)
+        Calculator.i += 1
 
-    def get_operation(self, operator):
-        opertor_length = len(operator)
+    def get_operation( self, operator):
+        operator_length = len( operator)
         self.display.insert( Calculator.i, operator)
-        Calculator.i+= opertor_length
+        Calculator.i += operator_length
 
     def calculate(self):
         display_state = self.display.get()
         try:
             math_expression = parser.expr( display_state).compile()
-            result = eval(math_expression)
+            result = eval( math_expression)
             self.clear_display()
             self.display.insert( 0, result)
         except Exception:
             self.clear_display()
             self.display.insert( 0, 'SyntaxError')
 
-    def clear_display(self):
-        self.display.delete(0, END)
+    def clear_display( self):
+        self.display.delete( 0, END)
 
-    def undo(self):
+    def undo( self):
         display_state = self.display.get()
-        if len(display_state):
+        if len( display_state):
             display_new_state = display_state[:-1]
             self.clear_display()
             self.display.insert( 0, display_new_state)
@@ -82,4 +82,4 @@ class Calculator:
             self.display.insert( 0, 'SyntaxError')
         
 #MAIN BLOCK
-calculator1= Calculator()
+calculator1 = Calculator()
