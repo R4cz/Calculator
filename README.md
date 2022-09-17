@@ -2,7 +2,7 @@
 
 <p align="center"><img src="./resources/readme/python-calculator.png" alt="python-calculator-image"></p>
 
-<p id="description">Simple calculator with graphical interface built in Python.</p>
+<p id="description">Simple calculator with graphical interface.</p>
 
 ## Table of Contents
 
